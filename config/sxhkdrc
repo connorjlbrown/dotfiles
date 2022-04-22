@@ -1,0 +1,114 @@
+## application shortcuts ##
+
+# terminal emulator
+super + Return
+	urxvt
+
+# file manager
+super + f
+	urxvt -e ranger
+
+# program launcher
+super + @space
+	rofi -show run
+
+# emacs
+super + e
+	emacs
+
+# e-mail client
+super + m
+	evolution	
+
+# browser
+super + w 
+	chromium
+
+# discord
+super + d
+	flatpak run com.discordapp.Discord
+
+# gimp
+super + shift + g 
+	gimp
+
+# signal messenger
+super + s
+	/opt/Signal/signal-desktop --no-sandbox %U
+
+# rss reader
+super + n
+	~/.joplin/Joplin.AppImage --no-sandbox
+
+# show help dialog
+super + `
+	~/.local/bin/sxkhd-help.sh
+
+# take a screenshot
+Print
+	screengrab
+
+## audio controls ##
+
+# increase volume
+XF86AudioRaiseVolume
+	pactl set-sink-volume 0 +5%
+
+# decrease volume
+XF86AudioLowerVolume
+	pactl set-sink-volume 0 -5%
+
+# toggle mute
+XF86AudioMute
+	pactl set-sink-mute 0 toggle
+
+## bspwm hotkeys ##
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# quit bspwm normally
+super + shift + q
+	bspc quit
+
+# close window
+super + q
+	bspc node -c
+
+# set the window state
+super + shift + f
+	bspc node -t fullscreen
+super + shift + t
+	bspc node -t tiled
+super + shift + s
+	bspc node -t pseudo_tiled
+
+# alternate between the tiled and monocle layout
+super + shift + m
+	bspc desktop -l next
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+# focus the last node/desktop
+#alt + Tab
+#	bspc node -f last
+#
+#alt + shift + Tab
+#	bspc desktop -f last
+
+## move/resize ##
+
+# expand a window by moving one of its side outward
+super + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# contract a window by moving one of its side inward
+super + shift + {h,j,k,l}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# rotate the entire binary tree
+super + Tab
+	bspc node @/ -C forward
