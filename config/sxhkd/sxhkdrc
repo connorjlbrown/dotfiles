@@ -12,21 +12,21 @@ super + f
 super + @space
 	rofi -show run
 
-# emacs
-super + e
-	emacs
-
 # e-mail client
-super + m
-	evolution	
+super + e
+	 geary
 
 # browser
 super + w 
-	chromium
+	microsoft-edge
 
 # discord
 super + d
-	flatpak run com.discordapp.Discord
+	OPENSSL_CONF="" ~/.local/bin/Ripcord-0.4.29-x86_64.AppImage
+
+# calcurse
+super + c
+	urxvt -e calcurse
 
 # gimp
 super + shift + g 
@@ -34,11 +34,15 @@ super + shift + g
 
 # signal messenger
 super + s
-	/opt/Signal/signal-desktop --no-sandbox %U
+	urxvt -e spt
 
-# rss reader
+# joplin notes
 super + n
-	~/.joplin/Joplin.AppImage --no-sandbox
+	flatpak run md.obsidian.Obsidian
+
+# zoom
+super + z
+	flatpak run us.zoom.Zoom
 
 # show help dialog
 super + `
@@ -112,3 +116,9 @@ super + shift + {h,j,k,l}
 # rotate the entire binary tree
 super + Tab
 	bspc node @/ -C forward
+
+## Et Cetera ##
+
+# tidalcycles + supercollider + visualizer
+super + t
+	urxvt -e sclang
