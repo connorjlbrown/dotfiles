@@ -1,6 +1,6 @@
 #! /bin/sh
 ##--Monitors--##
-bspc monitor LVDS-1 -d I II III IV V VI VII VIII IX X
+bspc monitor LVDS-1 -d 1 2 3 4 5 
 ###---Global Settings---###
 bspc config automatic_scheme spiral
 bspc config initial_polarity second_child
@@ -15,9 +15,9 @@ bspc config remove_disabled_monitors true
 bspc config remove_unplugged_monitors true
 bspc config merge_overlapping_monitors true
 
-bspc config normal_border_color	"#4c566a"
+bspc config normal_border_color	"#525452"
 bspc config active_border_color	"#1e1e1e"
-bspc config focused_border_color "#327bd1"
+bspc config focused_border_color "#7c807c"
 bspc config presel_feedback_color	"#327bd1"
 bspc config urgent_border_color "#dd2727"
 
@@ -26,26 +26,36 @@ bspc config top_padding 0
 bspc config bottom_padding 0
 bspc config left_padding 0
 bspc config right_padding 0
-bspc config border_width 0
-bspc config window_gap 7
+bspc config border_width 3
+bspc config window_gap 10
 
 ##--Autostart Applications--##
-killall "nm-applet"
-nm-applet &
 killall "sxhkd"
 sxhkd &
-tint2 -c ~/.config/tint2/tint2rc &
-wal -R &
-killall "compton"
-compton --config ~/.config/compton/compton.conf &
+mate-power-manager &
+killall "picom"
+picom --experimental-backend &
 redshift -l 42.43933:-123.33067 &
-killall "pnmixer"
-pnmixer &
-syncthing --no-browser &
 setxkbmap -option caps:escape &
+killall syncthing
+syncthing --no-browser &
+~/.local/pipx/venvs/pywal/bin/wal -R &
+xsetwacom set 10 area 0 0 7360 4600 &
+
+## "impersonates" a non-tiling window manager because certain java applications don't like tiling WMs
+wmname compiz &
+# polybar has to be the last thing or it doesnt work, dont fucking ask me why (,._.)
+~/.config/polybar/launch.sh --colorblocks &
+~/.local/bin/autohidePolybarBspwm.sh &
 
 ###---Rules---###
+#--some windows behave weirdly--#
+
 bspc rule -a mpv state=fullscreen # makes MPV stay in fullscreen
 bspc rule -a Soffice state=tiled # makes libreoffice not crash
 bspc rule -a Zathura state=tiled # why zathura isn't tiled to begin with, i have no idea
 bspc rule -a Emacs state=tiled
+bspc rule -a qjackctl state=floating # looks ugly as shit tiled
+bspc rule -a /usr/bin/flatpak run --branch=stable --arch=x86_64 --command=LogisimEvolution.sh com.github.reds.LogisimEvolution
+state=floating # doesnt work in tiled mode
+
