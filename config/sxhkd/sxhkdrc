@@ -2,31 +2,39 @@
 
 # terminal emulator
 super + Return
-	urxvt
+	kitty
 
 # file manager
 super + f
-	urxvt -e ranger
+	kitty -e ranger
 
 # program launcher
 super + @space
-	rofi -show run
+	~/.config/polybar/colorblocks/scripts/launcher.sh
 
-# e-mail client
+# matrix client
 super + e
-	 geary
+	 schildichat-desktop
+
+# music player
+super + m
+	sayonara
+
+# bluetooth manager 
+super + b
+	blueman-manager
 
 # browser
 super + w 
-	microsoft-edge
+	google-chrome
 
 # discord
 super + d
-	OPENSSL_CONF="" ~/.local/bin/Ripcord-0.4.29-x86_64.AppImage
+	OPENSSL_CONF="" ~/.local/bin/Ripcord.AppImage
 
 # calcurse
 super + c
-	urxvt -e calcurse
+	kitty -e calcurse
 
 # gimp
 super + shift + g 
@@ -34,12 +42,16 @@ super + shift + g
 
 # signal messenger
 super + s
-	urxvt -e spt
+	mate-volume-control
+
+# suspend system
+
+super + shift + s
+	systemctl suspend
 
 # joplin notes
 super + n
 	flatpak run md.obsidian.Obsidian
-
 # zoom
 super + z
 	flatpak run us.zoom.Zoom
@@ -49,22 +61,21 @@ super + `
 	~/.local/bin/sxkhd-help.sh
 
 # take a screenshot
-Print
-	screengrab
+super + p
+	flameshot gui
 
 ## audio controls ##
 
 # increase volume
-XF86AudioRaiseVolume
-	pactl set-sink-volume 0 +5%
+super + =
+	amixer set Master 5%+
 
 # decrease volume
-XF86AudioLowerVolume
-	pactl set-sink-volume 0 -5%
-
+super + -
+	amixer set Master 5%-
 # toggle mute
-XF86AudioMute
-	pactl set-sink-mute 0 toggle
+super + shift + -
+	amixer set Master toggle
 
 ## bspwm hotkeys ##
 
@@ -121,4 +132,14 @@ super + Tab
 
 # tidalcycles + supercollider + visualizer
 super + t
-	urxvt -e sclang
+	kitty -e sclang
+
+## hardware toggles ##
+
+# Vertical secondary monitor
+super + left
+	~/.screenlayout/portrait.sh
+
+# Horizontal secondary monitor
+super + down
+	~/.screenlayout/landscape.sh

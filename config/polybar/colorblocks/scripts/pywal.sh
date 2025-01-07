@@ -5,9 +5,9 @@ PFILE="$HOME/.config/polybar/colorblocks/colors.ini"
 RFILE="$HOME/.config/polybar/colorblocks/scripts/rofi/colors.rasi"
 WFILE="$HOME/.cache/wal/colors.sh"
 
-# Get colors
+# Get colors, modified to skip setting wallpaper because mine is handled by an outside program
 pywal_get() {
-	/home/connor/.local/pipx/venvs/pywal/bin/wal -i "$1" -q -t
+	/home/gayms/.local/pipx/venvs/pywal/bin/wal -i "$1" -q -t -n
 }
 
 # Change colors
@@ -43,7 +43,7 @@ change_color() {
 }
 
 # Main
-if [[ -x "/home/connor/.local/pipx/venvs/pywal/bin/wal" ]]; then
+if [[ -x "/home/gayms/.local/pipx/venvs/pywal/bin/wal" ]]; then
 	if [[ "$1" ]]; then
 		pywal_get "$1"
 

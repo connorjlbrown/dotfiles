@@ -1,0 +1,154 @@
+[Devices]
+HL-DT-ST DVD+-RW GH50N=8467,8468
+
+[External Programs]
+cdrdao default=/usr/bin/cdrdao
+cdrdao last seen newest version=1.2.4
+cdrdao user parameters=
+cdrecord default=/usr/bin/wodim
+cdrecord last seen newest version=1.1.11
+cdrecord user parameters=
+cdrskin user parameters=
+dvd+rw-format default=/usr/bin/dvd+rw-format
+dvd+rw-format last seen newest version=7.1
+dvd+rw-format user parameters=
+eMovix user parameters=
+growisofs default=/usr/bin/growisofs
+growisofs last seen newest version=7.1
+growisofs user parameters=
+mkisofs default=/usr/bin/genisoimage
+mkisofs last seen newest version=1.1.11
+mkisofs user parameters=
+normalize-audio user parameters=
+readcd default=/usr/bin/readom
+readcd last seen newest version=1.1.11
+readcd user parameters=
+search path[$e]=/usr/bin/,/usr/local/bin/,/usr/sbin/,/usr/local/sbin/,/sbin
+sox user parameters=
+transcode user parameters=
+vcdxbuild default=/usr/bin/vcdxbuild
+vcdxbuild last seen newest version=2.0.1
+vcdxbuild user parameters=
+vcdxminfo default=/usr/bin/vcdxminfo
+vcdxminfo last seen newest version=2.0.1
+vcdxminfo user parameters=
+vcdxrip default=/usr/bin/vcdxrip
+vcdxrip last seen newest version=2.0.1
+vcdxrip user parameters=
+
+[General Options]
+Allow overburning=false
+Fifo buffer=4
+Force unsafe operations=false
+Last system check version=20.12.2
+Manual buffer size=false
+Navigator breadcrumb mode=true
+No cd eject=false
+Show Document Header=true
+Show advanced GUI=false
+Show progress OSD=false
+Show splash=true
+Temp Dir=/home/gayms/Videos/
+action dialog startup settings=2
+ask_for_saving_changes_on_exit=true
+auto rewritable erasing=false
+burnfree=true
+check system config=true
+config version=20.12.2
+current theme=quant
+current_writer=/dev/sr0
+hide main window while writing=false
+keep action dialogs open=false
+
+[Welcome Widget]
+welcome_actions=file_new_data,file_new_audio,tools_copy_medium
+
+[file view]
+Allow Expansion=false
+Decoration position=2
+Show Inline Previews=true
+Show Preview=false
+Show hidden files=false
+Sort by=Name
+Sort directories first=true
+Sort reversed=false
+View Style=Detail
+last url[$e]=$HOME/Music/playlists/Mhm/
+show bookmarks=false
+
+[image writing]
+last written image[$e]=$HOME/Downloads/en_windows_xp_professional_with_service_pack_3_x86_cd_vl_x14-73974.iso
+recent images[$e]=$HOME/Downloads/en_windows_xp_professional_with_service_pack_3_x86_cd_vl_x14-73974.iso
+
+[last used Audio Ripping]
+blank replace string=_
+create_playlist=false
+encoder=k3boggvorbisencoder
+filename pattern=%A - %T/%n - !a='%A'{%a - }%t
+filetype=ogg
+last ripping directory[$e]=file:$HOME/Music
+never_skip=true
+paranoia_mode=0
+playlist pattern=%{albumartist} - %{albumtitle}
+read_retries=5
+relative_path_in_playlist=false
+replace blanks=false
+single_file=false
+use_index0=false
+write_cue_file=false
+
+[last used default audio settings]
+cd_text=true
+copies=1
+hide_first_track=false
+ignore read errors=false
+image path[$e]=$HOME/Videos/
+normalize-audio=false
+on_the_fly=true
+only_create_image=false
+paranoia mode=0
+read retries=128
+remove_image=true
+simulate=false
+writer_device=/dev/sr0
+writing_app=Auto
+writing_mode=auto
+writing_speed=0
+
+[last used image writing]
+copies=1
+data_track_mode=auto
+image path[$e]=$HOME/Downloads/en_windows_xp_professional_with_service_pack_3_x86_cd_vl_x14-73974.iso
+image type=auto
+multisession=false
+on_the_fly=true
+simulate=false
+verify_data=false
+writer_device=/dev/sr0
+writing_app=Auto
+writing_mode=auto
+writing_speed=0
+
+[main_window_settings]
+2 screens: Height=1004
+2 screens: Width=1894
+2 screens: XPosition=13
+2 screens: YPosition=483
+DVI-D-0 HDMI-0=DVI-D-0
+DVI-D-0 HDMI-0 Height 1080=994
+DVI-D-0 HDMI-0 Height 1920=994
+DVI-D-0 HDMI-0 Width 1080=652
+DVI-D-0 HDMI-0 Width 1920=652
+DVI-D-0 HDMI-0 XPosition=2115
+DVI-D-0 HDMI-0 YPosition=153
+RestorePositionForNextInstance=false
+State=AAAA/wAAAAD9AAAAAAAAB2YAAAOJAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+VGA-0 HDMI-0 Window-Maximized 1920x1080=true
+VGA-0 HDMI-0 XPosition=0
+VGA-0 HDMI-0 YPosition=64
+VGA-0 Height 768=545
+VGA-0 Width 1024=640
+VGA-0 Window-Maximized 1024x768=true
+VGA-0 XPosition=0
+VGA-0 YPosition=81

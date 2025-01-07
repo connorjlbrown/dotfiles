@@ -1,0 +1,16 @@
+[$Version]
+update_info=kwinrules.upd:replace-placement-string-to-enum,kwinrules.upd:use-virtual-desktop-ids
+
+[1]
+Description=qmmp
+skipswitcher=true
+skipswitcherrule=2
+type=5
+typerule=2
+types=256
+wmclass=qmmp
+wmclasscomplete=false
+wmclassmatch=1
+
+[General]
+count=1
